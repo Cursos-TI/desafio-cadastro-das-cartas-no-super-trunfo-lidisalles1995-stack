@@ -12,7 +12,7 @@ struct CartaSuperTrunfo {
 };
 
 int main() {
-    struct CartaSuperTrunfo carta1;
+    struct CartaSupertrunfo carta1;
     struct CartaSuperTrunfo carta2;
 
     printf("--- Edição da Carta 1 ---\n");
@@ -28,10 +28,10 @@ int main() {
     scanf("%d", &carta1.populacao);
 
     printf("Área (em km²): ");
-    scanf("%d", &carta1.area);
+    scanf("%f", &carta1.area);
 
     printf("PIB (em bilhões de dólares): ");
-    scanf("%d", &carta1.pib);
+    scanf("%f", &carta1.pib);
 
     printf("pontosTuristicos: ");
     scanf("%d", &carta1.pontosTuristicos);
@@ -40,11 +40,11 @@ int main() {
     while (getchar() != '\n');
 
     printf("\n--- Edição da Carta 2 ---\n");
-    printf("Nome da cidade: ");
+    printf("NomeCidade: ");
     fgets(carta2.nomeCidade, sizeof(carta2.nomeCidade), stdin);
     carta2.nomeCidade[strcspn(carta2.nomeCidade, "\n")] = 0;
 
-    printf("País: ");
+    printf("estado: ");
     fgets(carta2.estado, sizeof(carta2.estado), stdin);
     carta2.estado[strcspn(carta2.estado, "\n")] = 0;
 
@@ -52,10 +52,10 @@ int main() {
     scanf("%d", &carta2.populacao);
 
     printf("Área (em km²): ");
-    scanf("%d", &carta2.area);
+    scanf("%f", &carta2.area);
 
     printf("PIB (em bilhões de dólares): ");
-    scanf("%d", &carta2.pib);
+    scanf("%f", &carta2.pib);
 
      printf("pontosTuristicos: ");
     scanf("%d", &carta2.pontosTuristicos);
@@ -63,17 +63,17 @@ int main() {
     printf("\n--- Cartas Geradas ---\n");
 
     printf("\n--- Carta 1: %s ---\n", carta1.nomeCidade);
-    printf("País: %s\n", carta1.estado);
+    printf("estado: %s\n", carta1.estado);
     printf("População: %d milhões\n", carta1.populacao);
-    printf("Área: %d km²\n", carta1.area);
-    printf("PIB: %d bilhões de dólares\n", carta1.pib);
+    printf("Área: %f km²\n", carta1.area);
+    printf("PIB: %f bilhões de dólares\n", carta1.pib);
      printf("pontosturisticos: %d \n", carta1.pontosTuristicos);
 
     printf("\n--- Carta 2: %s ---\n", carta2.nomeCidade);
-    printf("País: %s\n", carta2.estado);
+    printf("estado: %s\n", carta2.estado);
     printf("População: %d milhões\n", carta2.populacao);
-    printf("Área: %d km²\n", carta2.area);
-    printf("PIB: %d bilhões de dólares\n", carta2.pib);
+    printf("Área: %.2f km²\n", carta2.area);
+    printf("PIB: %.2f bilhões de dólares\n", carta2.pib);
      printf("pontosTuristicos: %d \n", carta2.pontosTuristicos);
 
 
